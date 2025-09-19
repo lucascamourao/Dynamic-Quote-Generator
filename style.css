@@ -5,7 +5,17 @@
   font-family: 'Arial', sans-serif;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+
 body {
+    font-family: sans-serif;
+    padding: 20px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -13,6 +23,13 @@ body {
     background: linear-gradient(120deg, #04ff26, #007ac0);
     color: #fff;
 ;}
+
+#animated-box { 
+    width: 50px; 
+    height: 50px; 
+    background-color: cornflowerblue; 
+    border-radius: 10px; 
+}
 
 .container{
     text-align: center;
@@ -24,4 +41,34 @@ body {
     border-radius: 12px;
     max-width: 500px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    margin-top: 20px;
+
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);  /* Começa menor */
+    opacity: 0;  /* Inicia invisível */
+  }
+  to {
+    transform: scale(1);  /* Tamanho normal */
+    opacity: 1;  /* Fica visível */
+  }
+}
+
+.button-quote:hover {
+    background: rgba(0, 0, 0, 0.4);
+    transform: scale(1.15);
+}
+
+.quote-card {
+  display: flex;
+  flex-direction: column; /* coloca o texto e botão em coluna */
+  align-items: center;    /* centraliza na horizontal */
+  text-align: center;     /* garante centralização do texto */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }

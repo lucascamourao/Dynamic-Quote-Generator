@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quote Gen</title>
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+    <!-- Libraries (carregadas antes do módulo) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
 
-    <!-- Custom -->
-    <script type="module" src="quotes.js"></script>
+    <!-- App (module) -->
     <script type="module" src="app.js"></script>
 
-    <style>
-    body { font-family: sans-serif; padding: 20px; }
-    #animated-box { width: 50px; height: 50px; background-color: cornflowerblue; border-radius: 10px; }
-    </style>
 </head>
-<body>
-    <div>
-        <h1>Dynamic Quote Generator</h1>
-        <button class="button-quote">Get a Quote</button>
-    </div>
 
-    <div id="animated-box">HELLO</div>
+<body>
+  <main>
+    <h1>Dynamic Quote Generator</h1>
+
+    <div class="quote-card">
+      <!-- Aqui é onde o quote aparece -->
+      <p id="quote-text">Clique em "Get a Quote" pra começar ✨</p>
+      <button id="quote-button-id" class="button-quote">Get a Quote</button>
+    </div>
+  </main>
 </body>
 </html>
